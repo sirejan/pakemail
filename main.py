@@ -3,12 +3,13 @@ import requests
 import random
 import string
 import time
+import os
 from datetime import datetime
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 # === Konfigurasi ===
-BOT_TOKEN = "7991042178:AAFcd2iZWmGFo3yxPCRhT9BDKt_iMoBu0Bk"  # Ganti dengan token bot kamu
+BOT_TOKEN = os.getenv("BOT_TOKEN")  # Ganti dengan token bot kamu
 BASE_URL = "https://api.mail.tm"
 MAX_RETRIES = 3
 
